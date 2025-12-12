@@ -162,15 +162,15 @@ document
 // firebase start
 // Inisialisasi Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBM4-6rVSvGwwz70XR1iincHcGddYR7v40",
-  authDomain: "undanganarfanputri.firebaseapp.com",
+  apiKey: "AIzaSyDGds4VKmZkHqLMgHNBcsLEtjEBEGENH7I",
+  authDomain: "alfinaagam.firebaseapp.com",
   databaseURL:
-    "https://undanganarfanputri-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "undanganarfanputri",
-  storageBucket: "undanganarfanputri.firebasestorage.app",
-  messagingSenderId: "315186232604",
-  appId: "1:315186232604:web:62e8e4bd6ac00a20470ed9",
-  measurementId: "G-S8GZMB963Q",
+    "https://alfinaagam-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "alfinaagam",
+  storageBucket: "alfinaagam.firebasestorage.app",
+  messagingSenderId: "354911895564",
+  appId: "1:354911895564:web:b1833e6e3f00c9e7f66e29",
+  measurementId: "G-3GK2J7ZV81",
 };
 
 // Inisialisasi Firebase
