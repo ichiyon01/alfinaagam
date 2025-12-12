@@ -355,14 +355,14 @@ function openGallery(src) {
 //Save the date
 document.getElementById("save-date-btn").addEventListener("click", function () {
   // Detail acara
-  const title = "Pernikahan Arfan dan Putri";
+  const title = "Pernikahan Alfina dan Agam";
   const location =
     "Masjid At Taqwa Jembayat Jl. Tegal - Cilacap, Jembayat, Kec. Margasari, Kabupaten Tegal, Jawa Tengah";
   const description = "Jangan lupa hadir di acara pernikahan kami!";
 
   // Format tanggal (YYYYMMDD) untuk Google Calendar
-  const startDate = "20250405T020000Z"; // 5 April 2025, pukul 09:00 WIB (02:00 UTC)
-  const endDate = "20250405T060000Z"; // 5 April 2025, pukul 13:00 WIB (06:00 UTC)
+  const startDate = "20260104T020000Z"; // 5 April 2025, pukul 09:00 WIB (02:00 UTC)
+  const endDate = "20260104T030000Z";
 
   // URL Google Calendar
   const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
