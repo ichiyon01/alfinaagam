@@ -2,7 +2,7 @@
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
     loop: true,
-    nav: true,
+    nav: false,
     margin: 15,
     autoplay: true,
     autoplayhoverpause: true,
@@ -26,7 +26,7 @@ $(document).ready(function () {
 // owl carousel end
 
 // waktu start
-const countDownDate = new Date("Apr 05, 2025 00:00:00").getTime();
+const countDownDate = new Date("Jan 04, 2026 00:00:00").getTime();
 const x = setInterval(function () {
   const now = new Date().getTime();
   const distance = countDownDate - now;
@@ -304,6 +304,54 @@ function formatDate(timestamp) {
   }
 }
 
+/* ================================
+   BRIDE SLIDER
+=================================*/
+let brideIndex = 0;
+const brideSlides = document.querySelectorAll(".bride-slide");
+
+function runBrideSlider() {
+  brideSlides.forEach(slide => slide.classList.remove("active"));
+  brideIndex++;
+
+  if (brideIndex > brideSlides.length) brideIndex = 1;
+
+  brideSlides[brideIndex - 1].classList.add("active");
+
+  setTimeout(runBrideSlider, 3000);
+}
+
+if (brideSlides.length > 0) {
+  runBrideSlider();
+}
+
+
+/* ================================
+   GROOM SLIDER
+=================================*/
+let groomIndex = 0;
+const groomSlides = document.querySelectorAll(".groom-slide");
+
+function runGroomSlider() {
+  groomSlides.forEach(slide => slide.classList.remove("active"));
+  groomIndex++;
+
+  if (groomIndex > groomSlides.length) groomIndex = 1;
+
+  groomSlides[groomIndex - 1].classList.add("active");
+
+  setTimeout(runGroomSlider, 3000);
+}
+
+if (groomSlides.length > 0) {
+  runGroomSlider();
+}
+
+function openGallery(src) {
+    document.getElementById('galleryModalImg').src = src;
+}
+
+
 //Save the date
 document.getElementById("save-date-btn").addEventListener("click", function () {
   // Detail acara
@@ -326,3 +374,25 @@ document.getElementById("save-date-btn").addEventListener("click", function () {
   // Arahkan ke URL Google Calendar
   window.open(googleCalendarUrl, "_blank");
 });
+
+function copyText(id) {
+    const el = document.createElement("textarea");
+    el.value = document.getElementById(id).innerText;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+    alert("Berhasil disalin!");
+  }
+
+  document.getElementById("copyAddressButton").onclick = () => {
+    copyText("address");
+  };
+
+  document.getElementById("copyRekBCA").onclick = () => {
+    copyText("rekeningBCA");
+  };
+
+  document.getElementById("copyRekBRI").onclick = () => {
+    copyText("rekeningBRI");
+  };

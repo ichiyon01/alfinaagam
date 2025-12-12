@@ -1,11 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&family=Dancing+Script:wght@400;600;700&family=Playball&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Code:wght@300..700&display=swap');
 
 body {
-  background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    padding-top: 0 !important;
+    font-family: 'Poppins', sans-serif;
+    background-color: #95a682;
+}
+
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-wakwak .slideshow-container .slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .font-dancing {
   font-family: "Dancing Script", cursive;
+}
+
+.font-cormorant {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 .font-playball {
@@ -17,11 +48,11 @@ p {
 }
 
 .tg {
-  color: #ffffff;
+  color: #f5f4ee;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.692); /* Warna hitam transparan */
+  /* background: rgba(152, 168, 122, 0.2); Warna hitam transparan */
   z-index: 1; /* Posisi di bawah teks */
 }
 
@@ -30,7 +61,7 @@ p {
 }
 
 .bg-berem {
-  background-color: #ffffff;
+  background-color: #f5f4ee;
 }
 
 .text-berem {
@@ -103,11 +134,33 @@ p {
     display: none;
   }
   #front-text {
+    position: relative;
     padding-top: 40%;
     height: 100vh;
-    background-image: url(../img/img2c.jpeg);
+    background-image: url(../img/bg-awal.jpg);
     background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    overflow: hidden;
   }
+
+  #front-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.10); /* Overlay hitam transparan */
+    z-index: 1;
+  }
+
+  /* Agar teks muncul di atas overlay */
+  #front-text * {
+    position: relative;
+    z-index: 2;
+  }
+
   .ayat p {
     font-size: 0.9rem !important;
   }
@@ -344,4 +397,435 @@ hr {
 
 button {
   cursor: pointer; /* Efek kursor saat diarahkan ke tombol */
+}
+
+.content-wedding {
+  position: absolute;
+  bottom: 50px; /* posisi bawah */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.section-curve {
+  background-color: #95a682; /* warna hijau kamu */
+  position: relative;
+  padding-bottom: 120px; /* beri jarak agar curve terlihat */
+  border-bottom-left-radius: 50% 80px;
+  border-bottom-right-radius: 50% 80px;
+}
+
+/* Warna hijau latar ayat */
+.bg-ayat {
+    background-color: #95a682;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Wrapper background curve */
+.curve-bg {
+    background-color: #95a682; /* supaya menyatu */
+}
+
+/* SVG curve */
+.curve-svg {
+    width: 100%;
+    height: 120px;
+    display: block;
+}
+
+
+.bg-ayat {
+  background-color: #95a682; /* warna hijau kamu */
+  padding-top: 60px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.bride-slide,
+.groom-slide {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+.bride-slide.active,
+.groom-slide.active {
+    display: block;
+}
+
+#commentsList {
+  background: #f5f4ee; /* cover putih */
+}
+
+
+.mempelai-font{
+  font-family:'Cormorant', serif; font-style: italic; font-weight: 600; color:#9DAC86;
+}
+
+.ortu-font{
+  font-family: 'Cormorant', serif;font-size:16px; color:#444; font-style: italic;
+}
+
+.pasangan-font{
+  writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                font-family:'Cormorant', serif;
+                font-size: 34px;
+                font-style: italic;
+                color:#9DAC86;
+}
+
+.rounded-custom {
+    border-radius: 30px 30px 0 30px;
+  }
+
+  /* Card foto lebih aesthetic */
+  .photo-card {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 35px;
+  }
+
+  /* Vertical text aesthetic */
+  .vertical-text {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    opacity: 0.7;
+  }
+
+  .vertical-text span {
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: white;
+  }
+
+  .story-box {
+    border-left: 4px solid #9AA888;
+  }
+
+/* Vertical text aesthetic */
+.vertical-text {
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    opacity: 0.7;
+    color: #4b5346; 
+    z-index: 10;
+}
+
+.vertical-text span {
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: inherit;
+}
+
+/* === Timeline Styles === */
+
+.timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Garis tengah vertikal */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #9AA888; /* Warna hijau zaitun */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+    z-index: 1; /* Di bawah konten */
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    z-index: 2; /* Di atas garis */
+}
+
+/* Lingkaran penanda (dot) di garis tengah */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: -9px; /* Posisi ke tengah garis */
+    background-color: white;
+    border: 3px solid #4b5346;
+    top: 30px;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: #9AA888;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* === Item Sisi Kiri === */
+.left-item {
+    left: 0;
+}
+
+/* Arahkan lingkaran ke tengah dari sisi kanan item (karena item ada di kiri) */
+.left-item::after {
+    left: 50%;
+    margin-left: -9px;
+}
+
+/* Ekor/Panah di item kiri */
+.left-item .timeline-content::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 36px;
+    width: 0;
+    z-index: 1;
+    right: -10px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* === Item Sisi Kanan === */
+.right-item {
+    left: 50%;
+}
+
+/* Arahkan lingkaran ke tengah dari sisi kiri item (karena item ada di kanan) */
+.right-item::after {
+    left: -9px;
+}
+
+/* Ekor/Panah di item kanan */
+.right-item .timeline-content::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 36px;
+    width: 0;
+    z-index: 1;
+    left: -10px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+  .modal-divider {
+    width: 80px;
+    height: 3px;
+    background: #9aa888;
+    border-radius: 10px;
+  }
+
+  /* Kotak alamat */
+  .address-box {
+    background: #f3f4f1;
+    color: #444;
+    max-width: 350px;
+  }
+
+  /* Judul rekening aesthetic */
+  .rekening-title {
+    font-family: 'Cormorant', serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  /* Kotak rekening */
+  .rekening-box {
+    background: #ffffff;
+    border: 1.8px solid #9aa888;
+    max-width: 300px;
+    color: #333;
+  }
+
+  /* Tombol aesthetic */
+  .btn-blessing-close {
+    background: #f0f0f0;
+    border: 1px solid #b7b7b7;
+    color: #333;
+    transition: .3s;
+  }
+  .btn-blessing-close:hover {
+    background: #dcdcdc;
+  }
+
+  .btn-blessing-copy {
+    background: #9aa888;
+    color: white;
+    transition: .3s;
+    border: 1px solid #7f8f75;
+  }
+  .btn-blessing-copy:hover {
+    background: #88987b;
+  }
+  /* === ELEGANT FULL-PAGE COVER STYLES === */
+/* --- Virtual Blessings --- */
+.virtual-blessings-section {
+    background: linear-gradient(180deg, #f7f7f4, #eceee9);
+    border-radius: 30px 30px 0 0;   /* hanya melengkung di atas */
+    margin-top: 3rem;
+    padding-bottom: 70px !important;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.virtual-blessings-section .section-title {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.virtual-blessings-section .divider {
+    width: 90px;
+    height: 0;
+    border-top: 3px solid #9aa888;
+}
+
+.virtual-blessings-section .section-subtitle {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.btn-blessing {
+    background: #fff;
+    border: 2px solid #9aa888;
+    padding: 11px 32px;
+    font-weight: 500;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.btn-blessing:hover {
+    background: #9aa888;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+.curve-bottom {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+}
+
+
+
+/* --- Thank You Section --- */
+.thankyou-section {
+    position: relative;
+    height: 85vh;
+    overflow: hidden;
+    margin-bottom: 0 !important; /* Pastikan tidak ada margin bawah */
+    padding-bottom: 0 !important;
+}
+
+.thankyou-carousel img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+}
+
+.thankyou-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Ubah gradasi agar bagian atas lebih transparan/terang (menyambut bagian Blessings) 
+       dan bagian bawah lebih gelap (untuk teks Thank You) */
+    background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.05) 0%, /* Sangat ringan di atas */
+        rgba(0, 0, 0, 0.1) 30%,
+        rgba(0, 0, 0, 0.5) 70%, 
+        rgba(0, 0, 0, 0.8) 100% /* Gelap di bawah */
+    );
+}
+
+.thankyou-content {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    padding: 0 !important;
+}
+
+.footer-names {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* === Responsif untuk Layar Kecil (Mobile) === */
+@media screen and (max-width: 768px) {
+    /* Garis pindah ke sisi kiri */
+    .timeline-container::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Semua item konten pindah ke sisi kanan */
+    .left-item, .right-item {
+        left: 0%;
+    }
+
+    /* Lingkaran diposisikan di garis kiri */
+    .left-item::after, .right-item::after {
+        left: 22px;
+        margin-left: 0;
+        right: auto;
+    }
+
+    /* Panah disetel ke sisi kiri item */
+    .left-item .timeline-content::before, .right-item .timeline-content::before {
+        left: -10px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+        right: auto; /* Hilangkan properti right */
+    }
+
+    /* Penyesuaian khusus untuk item foto di mode mobile */
+    .left-item .timeline-content .timeline-date {
+        text-align: left !important;
+    }
 }
