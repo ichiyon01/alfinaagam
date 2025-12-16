@@ -583,7 +583,7 @@ button {
 
 .timeline-date {
     font-size: 0.85rem;
-    color: #9AA888;
+    color: #9aa888;
     font-weight: bold;
     display: block;
     margin-bottom: 8px;
@@ -749,6 +749,35 @@ button {
     overflow: hidden;
     margin-bottom: 0 !important; /* Pastikan tidak ada margin bawah */
     padding-bottom: 0 !important;
+    z-index: 1;
+}
+
+.thankyou-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Berikan tinggi yang cukup agar bentuk lancip terlihat jelas */
+    height: 100px; 
+    
+    /* GANTI DENGAN WARNA BACKGROUND SECTION DI ATASNYA */
+    background-color: #9aa888; 
+    
+    z-index: 2; /* Harus di atas carousel dan overlay */
+
+    /* MENGGUNAKAN CLIP-PATH UNTUK MEMBUAT BENTUK SEGITIGA TERBALIK/LANCIP KE ATAS */
+    /* Parameter: [kiri atas], [kanan atas], [kanan bawah], [kiri bawah] */
+    clip-path: polygon(
+        0% 0%,        /* Sudut Kiri Atas */
+        100% 0%,       /* Sudut Kanan Atas */
+        100% 100%,     /* Sudut Kanan Bawah */
+        50% 50%,       /* Puncak Lancip di Tengah Bawah */
+        0% 100%        /* Sudut Kiri Bawah */
+    );
+    
+    /* Geser ke atas (sesuaikan -100px dengan tinggi yang digunakan di atas) */
+    transform: translateY(-50%); 
 }
 
 .thankyou-carousel img {
@@ -756,6 +785,10 @@ button {
     height: 85vh;
     object-fit: cover;
 }
+
+/* Kubah Masjid */
+
+
 
 .thankyou-overlay {
     position: absolute;
@@ -780,7 +813,7 @@ button {
     bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 4;
     padding: 0 !important;
 }
 
