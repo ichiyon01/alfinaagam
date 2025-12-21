@@ -568,7 +568,7 @@ button {
     right: -9px; /* Posisi ke tengah garis */
     background-color: white;
     border: 3px solid #4b5346;
-    top: 30px;
+    top: 45px;
     border-radius: 50%;
     z-index: 3;
 }
