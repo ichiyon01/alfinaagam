@@ -357,7 +357,7 @@ document.getElementById("save-date-btn").addEventListener("click", function () {
   // Detail acara
   const title = "Pernikahan Alfina dan Agam";
   const location =
-    "Masjid At Taqwa Jembayat Jl. Tegal - Cilacap, Jembayat, Kec. Margasari, Kabupaten Tegal, Jawa Tengah";
+    "RM Alam Sindoro Sumbing, Muntung, Kec. Candiroto, Kabupaten Temanggung, Jawa Tengah 56257";
   const description = "Jangan lupa hadir di acara pernikahan kami!";
 
   // Format tanggal (YYYYMMDD) untuk Google Calendar
